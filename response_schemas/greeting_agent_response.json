@@ -1,0 +1,18 @@
+{
+  "agent_name": "Greeting Agent",
+  "agent_id": "69970d4c46f8ff4c518efb66",
+  "description": "Generates creative, personalized greetings based on the user's name and selected greeting style (formal, casual, or funny). Adapts tone and language accordingly.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "greeting": "string",
+    "style": "string",
+    "name": "string"
+  },
+  "example_response": {
+    "greeting": "The personalized greeting message",
+    "style": "The greeting style used (casual, formal, or funny)",
+    "name": "The user's name that was greeted"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "agents": [
+    {
+      "node_id": "greeting_agent",
+      "agent_id": "69970d4c46f8ff4c518efb66",
+      "name": "Greeting Agent",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "agent_type": "json",
+      "capabilities": {
+        "image_output": false,
+        "voice": false,
+        "file_output": false
+      }
+    }
+  ],
+  "knowledge_bases": [],
+  "schedules": []
+}

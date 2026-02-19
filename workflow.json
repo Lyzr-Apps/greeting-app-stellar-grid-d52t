@@ -1,0 +1,72 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Input (Name + Style)",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "greeting_agent",
+        "type": "Agent",
+        "label": "Greeting Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Greeting Output",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "greeting_agent"
+      },
+      {
+        "source": "greeting_agent",
+        "target": "output_node"
+      }
+    ]
+  },
+  "agents": [
+    {
+      "node_id": "greeting_agent",
+      "agent_id": "69970d4c46f8ff4c518efb66",
+      "name": "Greeting Agent",
+      "description": "Generates creative, personalized greetings based on the user's name and selected greeting style (formal, casual, or funny). Adapts tone and language accordingly.",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "name": "GreetingResponse",
+          "strict": true,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "greeting": {
+                "type": "string",
+                "description": "The personalized greeting message"
+              },
+              "style": {
+                "type": "string",
+                "description": "The greeting style used (casual, formal, or funny)"
+              },
+              "name": {
+                "type": "string",
+                "description": "The user's name that was greeted"
+              }
+            },
+            "required": ["greeting", "style", "name"],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ]
+}
