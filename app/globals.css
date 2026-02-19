@@ -71,5 +71,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Vivaldi', cursive, system-ui, sans-serif;
   }
 }
